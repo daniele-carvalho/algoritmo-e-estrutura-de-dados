@@ -3,15 +3,15 @@
 O principal objetivo desse repositório é
 - Documentar o aprendizado na disciplina.
 - Praticar lógica de programação.
-
-Conteúdos da disciplina
+<br></br>
+Conteúdos da disciplina:
 - Recursão.
 - Listas, pilhas e filas.
 - Árvores.
 - Grafos.
 - Ordenação.
 - Busca (binária, linear).
-
-Ferramentas utilizadas
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+<br></br>
+Ferramentas utilizadas:
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="40"/>
