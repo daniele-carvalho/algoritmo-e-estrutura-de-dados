@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Algoritmo que faz ordem decrescente recursivamente.
+
 void decrescente (int n){
     if (n==0){
         return;

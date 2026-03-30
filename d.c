@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Algoritmo que faz somatório recursivamente.
+
 int somatorio(int n){
     if (n==0){
         return 0;

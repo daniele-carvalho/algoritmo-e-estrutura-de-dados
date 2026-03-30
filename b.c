@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Algoritmo que faz ordem crescente recursivamente.
+
 void crescente (int cont, int n){
     if (cont==0){
         printf("%d", n);
