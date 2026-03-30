@@ -1,6 +1,9 @@
 #include <stdio.h>
 #define ll long long
-
+/* Projetar uma função recursiva que calcule o superfatorial. Ex:
+Entrada: 4
+Função retorna o resultado de: (4! * 3! * 2! * 1!)
+*/
 ll fatorial(ll x){
     if (x <=1 ){
         return 1;
