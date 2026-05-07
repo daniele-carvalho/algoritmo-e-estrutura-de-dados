@@ -1,7 +1,7 @@
 <h1 align="center">📚 Algoritmos e Estruturas de Dados</h1>
 
 <p align="center">
-  Repositório dedicado ao estudo e prática dos principais conceitos da disciplina.
+  Repositório dedicado ao estudo e prática dos principais conceitos da disciplina. Há disponível, também, resoluções de provas antigas da disciplina.
 </p>
 
 <hr>
