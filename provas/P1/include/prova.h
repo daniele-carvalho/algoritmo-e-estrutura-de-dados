@@ -13,5 +13,6 @@ lista * inserir(lista *l, int info);
 int somar_intervalo (lista *l, int a, int b);
 lista* gerar_intervalo (lista *l, int a, int b);
 lista* intercalar(lista *l1, lista *l2);
+int tam (lista* l);
 
 #endif

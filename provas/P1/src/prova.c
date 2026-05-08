@@ -32,3 +32,28 @@ int somar_intervalo(lista*l, int a, int b){
     
     return somar_intervalo(l->prox, a,b);
 }
+
+int tam(lista* l){
+    int t=0;
+    while (l!= NULL){
+        t++;
+    }
+    return t;
+}
+
+lista* intercalar(lista *l1, lista *l2){
+    lista* l3=NULL;
+    if (tam(l1)!=tam(l2)){
+        printf("Não é possível intercalar. Tamanhos de listas diferentes.\n");
+        return 0;
+    }
+    while (l2!= NULL){
+        l3 = inserir(l3, l1->info);
+        l3 = inserir(l3, l2->info);
+
+        l1=l1->prox;
+        l2=l2->prox;
+    }
+
+
+}
