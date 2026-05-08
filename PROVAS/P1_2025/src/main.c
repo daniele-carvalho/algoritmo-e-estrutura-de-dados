@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "prova.h"
+#include "../include/prova.h"
 
 int main(){
     lista* l = NULL;
