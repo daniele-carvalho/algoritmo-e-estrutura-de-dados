@@ -7,11 +7,13 @@ typedef struct no{
     struct no *prox;
 }lista;
 
+
 int vazia(lista*l);
 void printar (lista*l);
 lista * inserir(lista *l, int info);
+lista* inverter(lista* l1);
 int somar_intervalo (lista *l, int a, int b);
 lista* gerar_intervalo (lista *l, int a, int b);
-lista* intercalar(lista *l1, lista *l2);
+void intercalar(lista *l1, lista *l2);
 
 #endif
