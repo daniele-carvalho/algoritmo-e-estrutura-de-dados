@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/prova.h"
+#include "prova.h"
 
 int vazia(lista* l){
     return (l == NULL);
@@ -33,27 +33,48 @@ int somar_intervalo(lista*l, int a, int b){
     return somar_intervalo(l->prox, a,b);
 }
 
-int tam(lista* l){
-    int t=0;
-    while (l!= NULL){
-        t++;
+lista* gerar_intervalo(lista*l, int a, int b){
+    lista* aux=NULL;
+    
+    while(l!=NULL){
+        if (l->info>=a && l->info <=b){
+            aux = inserir(aux, l->info);
+        }
+        l=l->prox;
     }
-    return t;
+    
+    lista* inverte = NULL;
+    while(aux!=NULL){
+        inverte = inserir(inverte, aux->info);
+        aux= aux->prox;
+    }
+    return inverte;
 }
 
-lista* intercalar(lista *l1, lista *l2){
-    lista* l3=NULL;
+int tam(lista*l){
+    int tamanho=0;
+    while(l!=NULL){
+        tamanho++;
+        l= l->prox;
+    }
+    return tamanho;
+}
+    
+void intercalar (lista*l1,lista*l2){
+    lista* l3 = NULL;
     if (tam(l1)!=tam(l2)){
-        printf("Não é possível intercalar. Tamanhos de listas diferentes.\n");
-        return 0;
+        printf("\nNao eh possivel intercalar listas\n");
     }
-    while (l2!= NULL){
-        l3 = inserir(l3, l1->info);
-        l3 = inserir(l3, l2->info);
-
-        l1=l1->prox;
-        l2=l2->prox;
+    
+    printf("\nLista intercalada: \n");
+    while (l2!=NULL){
+        l3 = inserir(l3,l1->info);
+        l3 = inserir(l3,l2->info);
+        l1= l1->prox;
+        l2 = l2->prox;
     }
-
-
-}
+    
+    printar(l3);
+ }
+ 
+ 
