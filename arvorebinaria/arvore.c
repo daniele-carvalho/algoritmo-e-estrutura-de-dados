@@ -39,6 +39,13 @@ int somar(arvore r){
     }
 }
 
+int maior (arvore r){
+    if (r==NULL){
+        return 0;
+    }
+    return maior(r->dir);
+}
+
 int main(){
     arvore r=NULL;
     r= inserir(r, 12);
@@ -51,4 +58,6 @@ int main(){
 
     printar(r);
     printf("SOMA: %d", somar(r));
+    printf("MAIOR: %d", maior(r));
+    
 }
