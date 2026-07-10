@@ -59,5 +59,4 @@ int main(){
     printar(r);
     printf("SOMA: %d", somar(r));
     printf("MAIOR: %d", maior(r));
-    
 }

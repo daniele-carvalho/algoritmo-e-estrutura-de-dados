@@ -66,10 +66,26 @@ void preordem(arvore r){
     }
 }
 
-int somamaiores(arvore r, int k);
+//soma maiores que k.
+int somamaiores(arvore r, int k){
+    if (r==NULL) return 0;
+    if (r->info>k){
+        return r->info+somamaiores(r->esq,k)+somamaiores(r->dir, k);
+    }
+    return somamaiores(r->dir, k);
+}
 
 //retorna o numero de nos q tem filho unico
-int conta_nos_filho_unico(arvore r);
+int conta_nos_filho_unico(arvore r){
+    if (r==NULL) return 0;
+    if (r->esq==NULL && r->dir==NULL){
+        return conta_nos_filho_unico(r->esq)+conta_nos_filho_unico(r->dir);
+    }else if(r->esq!=NULL && r->dir!=NULL){
+        return conta_nos_filho_unico(r->esq)+conta_nos_filho_unico(r->dir);
+    } else{
+        return 1+conta_nos_filho_unico(r->esq)+conta_nos_filho_unico(r->dir);
+    }
+}
 
 arvore inserir (arvore r, int info){
     if (r==NULL){
@@ -116,7 +132,12 @@ int main(){
     printf("\nSOMA:\n");
     printf("%d",somar(r));
 
-    printf("DIFERENCA ENTRE OS VALORES MAIORES QUE K E MENORES QUE K.\n");
-    printf("Digite k: \n"); int k; scanf("%d", &k);
-    printf("%d", diferenca_ref(r, k));
+    printf("\nDIFERENCA ENTRE OS VALORES MAIORES QUE 15 E MENORES QUE K.\n");
+    printf("%d", diferenca_ref(r, 15));
+    
+    printf("\nSOMA MAIORES QUE 15\n ");
+    printf("%d", somamaiores(r,15));
+    
+    printf("\nConta nos com filho unico:\n");
+    printf("%d", conta_nos_filho_unico(r));
 }
