@@ -26,3 +26,13 @@ void atualizarFB (avl r){
     }
     r->fb= altura(r->dir)-altura(r->esq);
 }
+
+avl rotacaoesquerda(avl r){
+    avl x = r->dir;
+    r->dir = x->esq;
+    x->esq = r;
+
+    atualizarFB(r);
+    atualizarFB(x);
+    return x;
+}

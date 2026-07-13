@@ -9,12 +9,22 @@ struct no {
 
 typedef struct no *arvore;
 
+struct fila {
+    arvore dado;
+    struct fila* prox;
+};
+
+typedef struct fila *Fila;
+
+//usa a estrutura fila pra enfileirar e desinfileirar os niveis.
 void imprimir_por_niveis(arvore r);
 
 /*imprime os numeros da arvore em ordem crescente q estejam
  * no intervalo ABERTO entre a e b,
  *  evitando percorrer nos desnecessarios.*/
-void intervalo(arvore r, int a, int b);
+void intervalo(arvore r, int a, int b){
+    
+}
 
 /*retorna o menor valor maior que k */
 int seguinte (arvore r, int k);
